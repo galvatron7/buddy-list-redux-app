@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import MastHead from './components/MastHead/MastHead';
+import BuddyList from './components/BuddyList/BuddyList';
+import BuddyView from './components/BuddyView/BuddyView';
+import BuddySearch from "./components/BuddySearch/BuddySearch";
+import BuddyToolBar from './components/BuddyToolBar/BuddyToolBar';
+
+import './App.scss';
+import {useEffect} from "react";
+import {useDispatch} from "react-redux";
+import actions from "./actions/actions";
 
 function App() {
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+      dispatch(actions.doSearch());
+  },[]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <MastHead/>
+      <div className="container">
+        <div className="navigation">
+          <BuddySearch/>
+          <BuddyToolBar/>
+          <BuddyList/>
+        </div>
+        <BuddyView></BuddyView>
+      </div>
+      <div className="footer">
+        <span>
+          Powered By - Shane White {new Date().getFullYear()}
+        </span>
+      </div>
     </div>
   );
 }

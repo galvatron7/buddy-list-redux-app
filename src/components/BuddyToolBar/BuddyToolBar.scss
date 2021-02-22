@@ -1,0 +1,8 @@
+.buddy-tool-bar {
+  text-align: right;
+  grid-area: buddy-tool-bar;
+  padding: 5px 0px 0px 30px;
+  button:first-child {
+    margin-right:5px;
+  }
+}

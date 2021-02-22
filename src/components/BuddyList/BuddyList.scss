@@ -1,0 +1,11 @@
+.buddy-list-ctr {
+  overflow-y: scroll;
+  box-sizing: border-box;
+  grid-area: buddy-list-ctr;
+  margin-top:10px;
+
+  .buddy-list {
+    list-style:none;
+    padding:0px;
+  }
+}

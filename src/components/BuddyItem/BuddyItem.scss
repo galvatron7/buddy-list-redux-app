@@ -1,0 +1,34 @@
+.block {
+  border:solid 1px $border-dark;
+  background-color: #FFFFFF;
+  border-radius:3px;
+  padding:5px;
+  height:65px;
+  width:100%;
+  box-sizing:border-box;
+  .block-img {
+    width:53px;
+    height:100%;
+    display:inline-block;
+    border-radius:3px;
+  }
+  .block-detail {
+    float: right;
+    display: inline-block;
+    margin-left:10px;
+    width:76%;
+    height:100%;
+    a {
+      display: block;
+      text-decoration: none;
+      color:$masthead-black;
+    }
+    .block-min-txt {
+      font-size:11px;
+      color:#767676;
+    }
+  }
+  &:hover {
+    background-color:#dcdee3;
+  }
+}

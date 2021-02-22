@@ -1,0 +1,110 @@
+.content {
+  height: 100%;
+  box-sizing: border-box;
+  grid-area: content;
+
+  .hidden {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+
+  .buddy-view {
+    min-height: 610px;
+    background-color: #FFFFFF;
+    position: relative;
+    height: 100%;
+    .buddy-error {
+      padding: 10px;
+      color: $text-red;
+      background-color: $active-red;
+      border:solid 1px $active-red;
+      width:340px;
+      left:34%;
+      top:0px;
+      border-radius: 2px;
+      position: absolute;
+      z-index: 500;
+    }
+    .buddy-alert {
+      padding: 10px;
+      color:$alert-green;
+      background-color: $active-green;
+      border:solid 1px $active-green;
+      width:412px;
+      left:30%;
+      top:0px;
+      border-radius: 2px;
+      position: absolute;
+      z-index: 500;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        display:inline-block;
+        margin-left: 9px;
+      }
+
+      &.hidden {
+        display: none;
+      }
+      &.show {
+        display: block;
+      }
+    }
+    .buddy-start {
+      width:450px;
+      padding-top:100px;
+      text-align: center;
+      color:$masthead-black;
+      margin: 0 auto;
+    }
+  }
+  .buddy-banner {
+    position: relative;
+    /*background: url("/logo512.png") no-repeat;*/
+    background-color: $text-red;
+    background-repeat: repeat-x;
+    width:100%;
+    height:200px;
+    .buddy-img {
+      width:200px;
+      height: 200px;
+      border-radius: 15px;
+      position: absolute;
+      border: 1px solid #dcdee3;
+      top:50px;
+      left: 50px;
+    }
+  }
+  .buddy-btn-bar {
+    height:60px;
+    box-sizing:border-box;
+    border-top: solid 1px $border-dark;
+    border-bottom: solid 1px $border-dark;
+    padding: 20px 30px;
+    span {
+      margin-left: 280px;
+    }
+    .buddy-del-ctr {
+      float: right;
+    }
+  }
+  .buddy-bio {
+    margin:15px 50px;
+    text-align: left;
+    textarea {
+      margin:0px;
+    }
+  }
+  .buddy-signin {
+    text-align: left;
+    margin:15px 50px;
+  }
+  .bio-ctr {
+    height: 200px;
+    overflow-y: auto;
+  }
+}

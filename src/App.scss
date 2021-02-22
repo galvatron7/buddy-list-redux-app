@@ -1,0 +1,131 @@
+$border-dark: #CCCCCC;
+$text-red:#a94442;
+$active-red:#ebccd1;
+
+$alert-green:#3c763d;
+$active-green:#d6e9c6;
+
+$masthead-black:#495057;
+$tangerine-orange: orange;
+
+@import "components/MastHead/MastHead.scss";
+@import "components/BuddyList/BuddyList.scss";
+@import "components/BuddyView/BuddyView.scss";
+@import "components/BuddyItem/BuddyItem.scss";
+@import "components/BuddySearch/BuddySearch.scss";
+@import "components/BuddyToolBar/BuddyToolBar.scss";
+
+body {
+  background-color:lightgrey;
+  font-family: arial, sans-serif;
+  margin:0;
+  padding:0;
+  .app-container {
+    box-sizing: border-box;
+    display:grid;
+    min-width:980px;
+    grid-template-rows: 55px 1fr 55px;
+    grid-template-areas:
+            "masthead"
+            "container"
+            "footer";
+    height:100vh;
+
+
+    .buddy-txt {
+      margin-left: 63px;
+      border:solid 1px #CCCCCC;
+      display: block;
+      width:325px;
+      margin-bottom: 10px;
+      box-sizing:border-box;
+    }
+    input.buddy-txt {
+      height: 18px;
+      padding: 15px 5px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    textarea {
+      resize: none;
+      height: 210px;
+    }
+
+    /****************/
+
+    .container {
+      display:grid;
+      grid-area: container;
+      grid-template-columns: 330px 1fr;
+      box-sizing: border-box;
+      grid-template-areas:
+              "navigation content";
+      height: 100%;
+      .navigation {
+        border-right:solid 1px #CCCCCC;
+        border-top:none;
+        grid-area: navigation;
+        background-color: #FFFFFF;
+        padding:20px 15px;
+        box-sizing: border-box;
+        height: 100%;
+        display:grid;
+        grid-template-rows: 30px 50px 45.8rem;
+        grid-template-areas:
+                "wrapper-outer"
+                "buddy-tool-bar"
+                "buddy-list-ctr";
+      }
+    }
+
+    .btn {
+      height:26px;
+      background-color: #4d90fe;
+      border:solid 1px #3079ed;
+      color: #FFF;
+      width: 54px;
+      line-height: 27px;
+      font-size: 16px;
+      font-weight: bold;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+    .inner-btn {
+      height:26px;
+      width:100%;
+      border: 0 none;
+      outline: 0 none;
+      background: none repeat scroll 0 0 transparent;
+    }
+    .btn-txt {
+      height: 18px;
+      width: 18px;
+      color: #FFF;
+      margin:0px auto 2px;
+    }
+
+    .button {
+      height: 25px;
+      border:solid 1px #3079ed;
+      color: #FFF;
+      background: #34696f;
+      background-color: #4d90fe;
+      border-radius: 2px;
+    }
+    /*****/
+    .footer {
+      grid-area: footer;
+      border-top: solid 1px #CCCCCC;
+      background-color: #FFFFFF;
+      text-align: center;
+
+      span {
+        vertical-align: middle;
+        font-size:12px;
+        line-height: 3.5rem;
+        color: $text-red;
+      }
+    }
+  }
+}

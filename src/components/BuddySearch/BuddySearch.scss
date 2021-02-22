@@ -1,0 +1,26 @@
+.wrapper-outer {
+  line-height: 0px;
+  width:100%;
+  grid-area: wrapper-outer;
+  overflow-y: scroll;
+  white-space: nowrap;
+  .wrapper {
+    height:28px;
+    width:81%;
+    overflow: hidden;
+    background-color: #FFF;
+    text-align: left;
+    border-right: 0 none;
+    white-space: nowrap;
+  }
+  .search {
+    float: left;
+    .wrapper-inner {
+      height:18px;
+      width:100%;
+      padding:3px 5px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+}
