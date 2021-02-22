@@ -10,13 +10,8 @@ const BuddyToolBar = (props) => {
     };
 
     const handleAddClick = (event) => {
-        new Promise((resolve, reject) => {
-                dispatch(actions.setAlertState("alertError", false));
-                resolve();
-            })
-            .then(() => {
-                dispatch(actions.setView(3))
-            });
+        dispatch(actions.setAlertState("alertError", false));
+        dispatch(actions.setView(3))
     };
 
     return(
